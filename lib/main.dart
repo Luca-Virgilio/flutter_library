@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/pages/home_screen.dart';
 import 'package:flutter_widgets/pages/state_management/counter_page.dart';
 import 'package:flutter_widgets/pages/state_management/state_management_screen.dart';
+import 'package:flutter_widgets/pages/state_management/todo_list_page.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -45,6 +46,11 @@ class MyApp extends StatelessWidget {
                     path: 'counter',
                     builder: (BuildContext context, GoRouterState state) =>
                         const CounterPage(),
+                  ),
+                  GoRoute(
+                    path: 'todoList',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const TodoListPage(),
                   ),
                 ]),
           ]),

@@ -5,6 +5,7 @@ import '../model/example_item.dart';
 final exampleListProvider = Provider<List<ExampleItem>>((ref) {
   List<ExampleItem> examples = [
     ExampleItem(name: 'Simple counter', route: '/stateManagement/counter'),
+    ExampleItem(name: 'Todo list', route: '/stateManagement/todoList'),
   ];
 
   return examples;

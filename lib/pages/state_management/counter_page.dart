@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../repository/counter_notifier.dart';
+import '../../widgets/custom_app_bar.dart';
 
 class CounterPage extends ConsumerStatefulWidget {
   const CounterPage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _CounterPageState extends ConsumerState<CounterPage> {
   Widget build(BuildContext context) {
     int value = ref.watch(counterProvider.state).state;
     return Scaffold(
-      appBar: AppBar(title: const Text('Counter example')),
+      appBar: const CustomAppBar(title: 'Simple counter'),
       body: Center(
         child: Text('$value'),
       ),
