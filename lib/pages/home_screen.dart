@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('my flutter widget'),
+        title: Text('my flutter library'),
       ),
       bottomNavigationBar: BottomNavigationBar(
           onTap: (index) => changeRoute(index, context), //New

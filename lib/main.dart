@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/pages/home_screen.dart';
+import 'package:flutter_widgets/pages/state_management/counter_page.dart';
 import 'package:flutter_widgets/pages/state_management/state_management_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,7 +39,14 @@ class MyApp extends StatelessWidget {
             GoRoute(
                 path: 'stateManagement',
                 builder: (BuildContext context, GoRouterState state) =>
-                    StateManagementScreen()),
+                    StateManagementScreen(),
+                routes: [
+                  GoRoute(
+                    path: 'counter',
+                    builder: (BuildContext context, GoRouterState state) =>
+                        const CounterPage(),
+                  ),
+                ]),
           ]),
     ],
   );

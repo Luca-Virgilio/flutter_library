@@ -1,14 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/widgets/custom_app_bar.dart';
+import 'package:go_router/go_router.dart';
 
-class StateManagementScreen extends StatelessWidget {
+import '../../repository/state_management_notifier.dart';
+
+class StateManagementScreen extends ConsumerWidget {
   StateManagementScreen({Key? key}) : super(key: key);
 
   final List<String> entries = <String>['A', 'B', 'C'];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'internalDB'),
       body: Container(
@@ -27,16 +31,23 @@ class StateManagementScreen extends StatelessWidget {
             ),
             ListView.separated(
               shrinkWrap: true,
-              padding: EdgeInsets.all(8),
-              itemCount: entries.length,
+              padding: const EdgeInsets.all(8),
+              itemCount: ref.read(exampleListProvider).length,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                return GestureDetector(
+                  onTap: () {
+                    context.go(ref.read(exampleListProvider)[index].route);
+                  },
+                  child: Container(
+                    height: 50,
+                    decoration: const BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Center(
+                      child: Text(ref.read(exampleListProvider)[index].name),
+                    ),
                   ),
-                  child: Center(child: Text('Entry ${entries[index]}')),
                 );
               },
               separatorBuilder: (BuildContext context, int index) =>
