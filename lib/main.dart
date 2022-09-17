@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_widgets/pages/home_screen.dart';
-import 'package:flutter_widgets/pages/state_management/counter_page.dart';
-import 'package:flutter_widgets/pages/state_management/state_management_screen.dart';
-import 'package:flutter_widgets/pages/state_management/todo_list_page.dart';
-import 'package:flutter_widgets/pages/style/body_screen.dart';
-import 'package:flutter_widgets/pages/style/text_screen.dart';
+import 'package:flutter_widgets/router.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -32,40 +27,5 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  final GoRouter _router = GoRouter(
-    routes: <GoRoute>[
-      GoRoute(
-          path: '/',
-          builder: (BuildContext context, GoRouterState state) =>
-              const HomeScreen(),
-          routes: [
-            GoRoute(
-                path: 'stateManagement',
-                builder: (BuildContext context, GoRouterState state) =>
-                    StateManagementScreen(),
-                routes: [
-                  GoRoute(
-                    path: 'counter',
-                    builder: (BuildContext context, GoRouterState state) =>
-                        const CounterPage(),
-                  ),
-                  GoRoute(
-                    path: 'todoList',
-                    builder: (BuildContext context, GoRouterState state) =>
-                        const TodoListPage(),
-                  ),
-                ]),
-            GoRoute(
-              path: 'style/body',
-              builder: (BuildContext context, GoRouterState state) =>
-                  const BodyScreen(),
-            ),
-            GoRoute(
-              path: 'style/text',
-              builder: (BuildContext context, GoRouterState state) =>
-                  const TextScreen(),
-            ),
-          ]),
-    ],
-  );
+  final GoRouter _router = GoRouter(routes: routes);
 }
