@@ -10,7 +10,7 @@ class TextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'body'),
+      appBar: const CustomAppBar(title: 'Text'),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

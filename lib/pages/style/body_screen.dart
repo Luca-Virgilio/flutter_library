@@ -9,7 +9,7 @@ class BodyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'body'),
+      appBar: const CustomAppBar(title: 'Row & Column'),
       body: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
         child: Column(

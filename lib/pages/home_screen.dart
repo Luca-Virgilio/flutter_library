@@ -26,8 +26,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<ExampleItem> examples = [
-      ExampleItem(name: 'Row and column', route: '/style/body'),
+      ExampleItem(name: 'Row & column', route: '/style/body'),
       ExampleItem(name: 'Text', route: '/style/text'),
+      ExampleItem(name: 'Flex', route: '/style/flex'),
     ];
     return Scaffold(
       appBar: AppBar(

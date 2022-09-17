@@ -4,6 +4,7 @@ import 'package:flutter_widgets/pages/state_management/counter_page.dart';
 import 'package:flutter_widgets/pages/state_management/state_management_screen.dart';
 import 'package:flutter_widgets/pages/state_management/todo_list_page.dart';
 import 'package:flutter_widgets/pages/style/body_screen.dart';
+import 'package:flutter_widgets/pages/style/flex_screen.dart';
 import 'package:flutter_widgets/pages/style/text_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,6 +39,11 @@ List<GoRoute> routes = <GoRoute>[
           path: 'style/text',
           builder: (BuildContext context, GoRouterState state) =>
               const TextScreen(),
+        ),
+        GoRoute(
+          path: 'style/flex',
+          builder: (BuildContext context, GoRouterState state) =>
+              const FlexScreen(),
         ),
       ]),
 ];
