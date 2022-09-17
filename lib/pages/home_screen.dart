@@ -12,6 +12,8 @@ class HomeScreen extends StatelessWidget {
   static List<MyNavbarItem> mainTopic = [
     MyNavbarItem(label: 'home', icon: Icons.home, route: '/'),
     MyNavbarItem(
+        label: 'Components', icon: Icons.settings, route: '/components'),
+    MyNavbarItem(
         label: 'internalDB',
         icon: Icons.table_chart,
         route: '/stateManagement'),
@@ -61,7 +63,8 @@ class HomeScreen extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(
                         color: Colors.green.shade800,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
                       ),
                       child: Center(
                         child: Text(
