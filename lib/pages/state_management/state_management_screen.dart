@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/widgets/custom_app_bar.dart';
@@ -26,7 +25,7 @@ class StateManagementScreen extends ConsumerWidget {
               height: 20,
             ),
             const Text('Please select an example from the list'),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ListView.separated(

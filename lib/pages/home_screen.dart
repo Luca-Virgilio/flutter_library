@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('my flutter library'),
+        title: const Text('my flutter library'),
       ),
       body: SizedBox(
         child: Padding(

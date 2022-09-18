@@ -1,6 +1,3 @@
-import 'dart:developer';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/widgets/app_large_text.dart';
@@ -24,13 +21,13 @@ class _TodoListPageState extends ConsumerState<TodoListPage> {
   Widget build(BuildContext context) {
     List<Todo> todos = ref.watch(todosProvider);
     return Scaffold(
-      appBar: CustomAppBar(title: 'TodoList'),
+      appBar: const CustomAppBar(title: 'TodoList'),
       body: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -58,7 +55,7 @@ class _TodoListPageState extends ConsumerState<TodoListPage> {
             const SizedBox(
               height: 10,
             ),
-            Container(
+            SizedBox(
                 width: double.infinity,
                 child: Center(child: AppLargeText(text: 'Todo list'))),
             const SizedBox(
@@ -69,7 +66,7 @@ class _TodoListPageState extends ConsumerState<TodoListPage> {
               height: 10,
             ),
             todos.isEmpty
-                ? Text("List is empty")
+                ? const Text("List is empty")
                 : SizedBox(
                     height: 400,
                     child: ListView.builder(
