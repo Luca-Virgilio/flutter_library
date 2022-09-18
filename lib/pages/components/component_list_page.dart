@@ -10,7 +10,9 @@ class ComponentListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ExampleItem> examples = [];
+    final List<ExampleItem> examples = [
+      ExampleItem(name: 'Slider', route: '/components/slider'),
+    ];
 
     return Scaffold(
       appBar: const CustomAppBar(title: 'Components'),
@@ -38,7 +40,7 @@ class ComponentListScreen extends StatelessWidget {
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.green.shade800,
+                      color: Colors.orange.shade500,
                       borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                     child: Center(
