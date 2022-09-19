@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_widgets/pages/components/component_list_page.dart';
+import 'package:flutter_widgets/pages/components/list_view_screen.dart';
 import 'package:flutter_widgets/pages/components/slider_screen.dart';
 import 'package:flutter_widgets/pages/home_screen.dart';
 import 'package:flutter_widgets/pages/state_management/counter_page.dart';
@@ -56,6 +57,11 @@ List<GoRoute> routes = <GoRoute>[
                 path: 'slider',
                 builder: (BuildContext context, GoRouterState state) =>
                     const SliderScreen(),
+              ),
+              GoRoute(
+                path: 'listView',
+                builder: (BuildContext context, GoRouterState state) =>
+                    const ListViewScreen(),
               ),
             ]),
       ]),

@@ -12,6 +12,7 @@ class ComponentListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<ExampleItem> examples = [
       ExampleItem(name: 'Slider', route: '/components/slider'),
+      ExampleItem(name: 'List view', route: '/components/listView'),
     ];
 
     return Scaffold(
